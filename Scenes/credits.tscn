@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://t82tsshipyma"]
+
+[ext_resource type="Script" uid="uid://b441g42qqo5d2" path="res://Scripts/credits.gd" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://dy1xc7fjwsch2" path="res://Assets/Credits.png" id="1_r18jl"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_gryuy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+texture = ExtResource("1_r18jl")
