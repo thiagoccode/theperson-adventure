@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://pf365w0nlwvf"]
+[gd_scene load_steps=11 format=4 uid="uid://pf365w0nlwvf"]
 
 [ext_resource type="Texture2D" uid="uid://craoltnjnrvdt" path="res://Assets/background-1.png" id="1_5a7ea"]
 [ext_resource type="Texture2D" uid="uid://rs5m5ykn81x7" path="res://Assets/Tilemap/tileset.png" id="1_a02cp"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dc0gholcqnlre" path="res://Scenes/key.tscn" id="5_5ukr8"]
 [ext_resource type="PackedScene" uid="uid://coxfyvhf3fidb" path="res://Scenes/door.tscn" id="6_o06y3"]
 [ext_resource type="PackedScene" uid="uid://dyb0qtgu4mbud" path="res://Scenes/plataforma.tscn" id="7_o06y3"]
+[ext_resource type="PackedScene" uid="uid://coqgsa3o8au6y" path="res://Scenes/siri.tscn" id="8_k7acu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_go701"]
 texture = ExtResource("1_a02cp")
@@ -66,7 +67,7 @@ texture = ExtResource("1_a02cp")
 1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_5a7ea"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 5
 sources/0 = SubResource("TileSetAtlasSource_go701")
 
 [node name="World" type="Node2D"]
@@ -74,6 +75,7 @@ sources/0 = SubResource("TileSetAtlasSource_go701")
 [node name="Theperson" parent="." groups=["player"] instance=ExtResource("2_go701")]
 z_index = 3
 position = Vector2(50, 426)
+collision_mask = 15
 
 [node name="Animacao" parent="Theperson" index="1"]
 position = Vector2(0, 0)
@@ -128,12 +130,6 @@ position = Vector2(471, 458)
 [node name="Estacas7" parent="Traps" instance=ExtResource("4_8j60k")]
 position = Vector2(503, 474)
 
-[node name="Key" parent="." instance=ExtResource("5_5ukr8")]
-position = Vector2(2693, 424)
-
-[node name="Door" parent="." instance=ExtResource("6_o06y3")]
-position = Vector2(2769, 418)
-
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="plataforma" parent="Plataformas" instance=ExtResource("7_o06y3")]
@@ -141,5 +137,27 @@ position = Vector2(2135, 425)
 
 [node name="plataforma2" parent="Plataformas" instance=ExtResource("7_o06y3")]
 position = Vector2(2626, 425)
+
+[node name="Interagiveis" type="Node" parent="."]
+
+[node name="Door" parent="Interagiveis" instance=ExtResource("6_o06y3")]
+position = Vector2(2769, 418)
+
+[node name="Key" parent="Interagiveis" instance=ExtResource("5_5ukr8")]
+position = Vector2(2693, 424)
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Siri" parent="Enemies" instance=ExtResource("8_k7acu")]
+position = Vector2(975, 498)
+
+[node name="Siri2" parent="Enemies" instance=ExtResource("8_k7acu")]
+position = Vector2(1053, 498)
+
+[node name="Siri3" parent="Enemies" instance=ExtResource("8_k7acu")]
+position = Vector2(1176, 418)
+
+[node name="Siri4" parent="Enemies" instance=ExtResource("8_k7acu")]
+position = Vector2(740, 418)
 
 [editable path="Theperson"]

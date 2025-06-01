@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var altura: float = 222.0
+@export var altura: float = 222.5
 @export var velocidade: float = 50.0
 @export var tempo_de_espera: float = 1.0
 

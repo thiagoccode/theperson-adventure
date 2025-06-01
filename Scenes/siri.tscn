@@ -1,0 +1,120 @@
+[gd_scene load_steps=15 format=3 uid="uid://coqgsa3o8au6y"]
+
+[ext_resource type="Script" uid="uid://cnrcl1uanap8m" path="res://Scripts/siri.gd" id="1_62dbk"]
+[ext_resource type="Texture2D" uid="uid://0dpfai3onf3g" path="res://Assets/enemies/Siri-Idle.png" id="1_bilo8"]
+[ext_resource type="Texture2D" uid="uid://dfe6egyl0hfho" path="res://Assets/enemies/Siri-Run.png" id="2_62dbk"]
+[ext_resource type="Texture2D" uid="uid://dtps83d75p3yu" path="res://Assets/enemies/Siri-Dead.png" id="2_tknhg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62dbk"]
+size = Vector2(24, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql4td"]
+atlas = ExtResource("2_tknhg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85pn6"]
+atlas = ExtResource("2_tknhg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p31tw"]
+atlas = ExtResource("1_bilo8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn7n3"]
+atlas = ExtResource("2_62dbk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5qfg"]
+atlas = ExtResource("2_62dbk")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oaua"]
+atlas = ExtResource("2_62dbk")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ql4td"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql4td")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85pn6")
+}],
+"loop": false,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p31tw")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn7n3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5qfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oaua")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bcevb"]
+size = Vector2(3.98687, 19.9985)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sv78s"]
+size = Vector2(28, 19)
+
+[node name="Siri" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_62dbk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 0
+visibility_layer = 0
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_62dbk")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ql4td")
+animation = &"Walk"
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+exclude_parent = false
+target_position = Vector2(16, 20)
+collision_mask = 4
+
+[node name="RayCastParede" type="RayCast2D" parent="."]
+exclude_parent = false
+target_position = Vector2(16, 5)
+collision_mask = 6
+
+[node name="HeadArea" type="Area2D" parent="."]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HeadArea"]
+position = Vector2(0.000729144, -5)
+rotation = 1.56934
+shape = SubResource("RectangleShape2D_bcevb")
+debug_color = Color(0, 0.643797, 0.29332, 0.42)
+
+[node name="BodyArea" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BodyArea"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_sv78s")
+debug_color = Color(0.956669, 0.0961213, 3.85046e-07, 0.42)
+
+[connection signal="body_entered" from="HeadArea" to="." method="_on_head_area_body_entered"]
+[connection signal="body_entered" from="BodyArea" to="." method="_on_body_area_body_entered"]

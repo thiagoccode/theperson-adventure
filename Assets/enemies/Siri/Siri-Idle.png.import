@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0dpfai3onf3g"
-path="res://.godot/imported/Siri-Idle.png-70ba03a4f68e952637711555966275e7.ctex"
+uid="uid://bejj57wq5ui5a"
+path="res://.godot/imported/Siri-Idle.png-8bf3281f5c4f87484327ba4f50fa948c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/Siri-Idle.png"
-dest_files=["res://.godot/imported/Siri-Idle.png-70ba03a4f68e952637711555966275e7.ctex"]
+source_file="res://Assets/enemies/Siri/Siri-Idle.png"
+dest_files=["res://.godot/imported/Siri-Idle.png-8bf3281f5c4f87484327ba4f50fa948c.ctex"]
 
 [params]
 
