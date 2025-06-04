@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @onready var animacao = $Animacao
 @onready var death_timer = $DeathTimer
 
@@ -54,7 +55,7 @@ func morrer():
 	death_timer.start()
 
 
-func _on_death_timer_timeout():
+#func _on_death_timer_timeout():
 	# Aqui você pode carregar a cena do menu de retry
 	# Por enquanto, um print como placeholder
-	get_tree().change_scene_to_file("res://RetryMenu.tscn")  # Troque pelo caminho correto
+	#get_tree().change_scene_to_file("res://RetryMenu.tscn")  # Troque pelo caminho correto
