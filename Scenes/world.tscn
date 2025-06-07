@@ -147,7 +147,7 @@ position = Vector2(2135, 425)
 position = Vector2(2626, 425)
 
 [node name="PlataformaHorizontal" parent="Plataformas" instance=ExtResource("6_0fj1v")]
-position = Vector2(919, 431)
+position = Vector2(934, 450)
 
 [node name="Interagiveis" type="Node" parent="."]
 
@@ -181,10 +181,10 @@ position = Vector2(1176, 418)
 position = Vector2(740, 418)
 
 [node name="Snake" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(994, 464)
+position = Vector2(881, 427)
 
 [node name="Snake2" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1077, 485)
+position = Vector2(654, 427)
 
 [node name="Snake3" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(964, 481)
@@ -199,7 +199,7 @@ position = Vector2(1014, 409)
 position = Vector2(1051, 433)
 
 [node name="Snake8" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(962, 437)
+position = Vector2(1021, 471)
 
 [node name="Snake9" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1008, 441)
@@ -229,7 +229,7 @@ position = Vector2(1075, 456)
 position = Vector2(1066, 461)
 
 [node name="Snake18" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(958, 463)
+position = Vector2(1041, 499)
 
 [node name="Snake19" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1018, 497)
@@ -250,7 +250,7 @@ position = Vector2(999, 427)
 position = Vector2(1082, 448)
 
 [node name="Snake24" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(969, 444)
+position = Vector2(1021, 467)
 
 [node name="Snake25" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1012, 448)
@@ -259,7 +259,7 @@ position = Vector2(1012, 448)
 position = Vector2(1056, 396)
 
 [node name="Snake28" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(967, 400)
+position = Vector2(1026, 467)
 
 [node name="Snake29" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1013, 404)
@@ -268,7 +268,10 @@ position = Vector2(1013, 404)
 position = Vector2(1056, 368)
 
 [node name="Snake31" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(995, 378)
+position = Vector2(1852, 379)
+
+[node name="Snake42" parent="Enemies" instance=ExtResource("9_5v1tr")]
+position = Vector2(2101, 427)
 
 [node name="Snake32" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1055, 465)
@@ -289,7 +292,7 @@ position = Vector2(1080, 419)
 position = Vector2(1071, 424)
 
 [node name="Snake38" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(963, 426)
+position = Vector2(1021, 476)
 
 [node name="Snake39" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1023, 460)
@@ -302,50 +305,5 @@ position = Vector2(1377, 427)
 
 [node name="Snake47" parent="Enemies" instance=ExtResource("9_5v1tr")]
 position = Vector2(1576, 379)
-
-[node name="Snake51" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1499, 379)
-
-[node name="Snake55" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1856, 379)
-
-[node name="Snake56" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1795, 379)
-
-[node name="Snake57" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(2087, 427)
-
-[node name="Snake42" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1040, 433)
-
-[node name="Snake43" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(999, 427)
-
-[node name="Snake44" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1082, 448)
-
-[node name="Snake45" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(969, 444)
-
-[node name="Snake46" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1012, 448)
-
-[node name="Snake48" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1056, 396)
-
-[node name="Snake49" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(967, 400)
-
-[node name="Snake50" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(622, 427)
-
-[node name="Snake52" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(995, 378)
-
-[node name="Snake53" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(1055, 465)
-
-[node name="Snake54" parent="Enemies" instance=ExtResource("9_5v1tr")]
-position = Vector2(989, 463)
 
 [editable path="Theperson"]

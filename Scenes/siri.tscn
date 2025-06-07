@@ -69,10 +69,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bcevb"]
-size = Vector2(3.98687, 16.0014)
+size = Vector2(0.97961, 14.0014)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sv78s"]
-size = Vector2(28, 19)
+size = Vector2(28, 11)
 
 [node name="Siri" type="CharacterBody2D"]
 collision_layer = 2
@@ -103,7 +103,7 @@ collision_mask = 6
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HeadArea"]
-position = Vector2(0.000728428, -5)
+position = Vector2(2.98023e-08, -6.5)
 rotation = 1.56934
 shape = SubResource("RectangleShape2D_bcevb")
 debug_color = Color(0, 0.643797, 0.29332, 0.42)
@@ -112,7 +112,7 @@ debug_color = Color(0, 0.643797, 0.29332, 0.42)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BodyArea"]
-position = Vector2(0, 6.5)
+position = Vector2(0, 10.5)
 shape = SubResource("RectangleShape2D_sv78s")
 debug_color = Color(0.956669, 0.0961213, 3.85046e-07, 0.42)
 

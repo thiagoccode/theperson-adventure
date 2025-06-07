@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var velocidade: float = 70.0
+@export var velocidade: float = 100.0
 @export var gravidade: float = 980.0
 
 @onready var animacao = $AnimatedSprite2D

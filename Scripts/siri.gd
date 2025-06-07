@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var velocidade: float = 60.0
+@export var velocidade: float = 80.0
 @onready var raycast_chao = $RayCast2D
 @onready var raycast_parede = $RayCastParede
 @onready var animacao = $AnimatedSprite2D
